@@ -1,3 +1,5 @@
+'use strict';
+
 window.addEventListener('DOMContentLoaded', () => {
   const pokeP = document.getElementById('pokeInfo')
   const pokeDiv = document.getElementById('pokemon-info')
