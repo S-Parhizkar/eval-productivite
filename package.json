@@ -5,9 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "test": "jest",
-    "type": "module"
-    
+    "test": "jest"  
   },
   "keywords": [],
   "author": "",

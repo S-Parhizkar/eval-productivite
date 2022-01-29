@@ -1,5 +1,4 @@
-import { returnAnObject } from './public/js/functionsToTest';
-import { multiplyAllByTwo } from './public/js/unctionsToTest1';
+import { returnAnObject, multiplyAllByTwo } from './public/js/functionsToTest';
 
 describe('La fonction returnAnObject ', () => {
   test('devrait retourner un objet quand on lui donne l\'argument objet  ', () => {
