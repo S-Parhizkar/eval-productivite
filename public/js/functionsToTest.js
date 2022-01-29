@@ -1,4 +1,4 @@
-const returnAnObject = (...args) => {
+export const returnAnObject = (...args) => {
   let response = {}
   if (args.length) {
     let index = 0

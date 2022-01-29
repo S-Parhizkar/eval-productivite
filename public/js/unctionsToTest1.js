@@ -1,11 +1,10 @@
 
-const multiplyAllByTwo = (arrayOfNumbers) => {
+export const multiplyAllByTwo = (arrayOfNumbers) => {
     let response
     if (
-      arrayOfNumbers.constructor.prototype === new Array().constructor.prototype
+      Array.isArray(arrayOfNumbers)
     ) {
       response = arrayOfNumbers.map((val) => val * 2)
-      console.log('arrayTimesTwo: ', arrayTimesTwo)
     } else {
       response = 'The argument is not an Array of numbers'
     }
@@ -13,3 +12,4 @@ const multiplyAllByTwo = (arrayOfNumbers) => {
   }
   
   exports.secondeFonction= multiplyAllByTwo;
+
