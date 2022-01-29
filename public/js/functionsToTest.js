@@ -12,4 +12,5 @@ export const returnAnObject = (...args) => {
   return response
 }
 
-exports.premiereFonction = returnAnObject;
+// exports.premiereFonction = returnAnObject;
+export default returnAnObject

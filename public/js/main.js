@@ -1,8 +1,8 @@
-const fonctionExportee = require("./functionsToTest.js");
-const fonctionExportee1 = require("./functionsToTest1.js");
+import returnAnObject from "./functionsToTest.js"
+import multiplyAllByTwo from "./functionsToTest1.js"
 
-fonctionExportee.premiereFonction()
-fonctionExportee1.secondeFonction()
+returnAnObject()
+multiplyAllByTwo()
 
-import fetchPokemon  from "./fetchPokemon.js";
+import fetchPokemon from "./fetchPokemon.js";
 import fetchPokemonAbilities from "./fetchPokemonAbilities"

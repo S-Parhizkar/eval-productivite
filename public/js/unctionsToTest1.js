@@ -11,5 +11,6 @@ export const multiplyAllByTwo = (arrayOfNumbers) => {
     return response
   }
   
-  exports.secondeFonction= multiplyAllByTwo;
+  // exports.secondeFonction= multiplyAllByTwo;
+  export default multiplyAllByTwo
 
