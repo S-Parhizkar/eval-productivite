@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const pokeAbilityBtn = document.getElementById('ability')
   const pokeInfo = {}
   const fetchPokemonA = async () => {
-    const pokemon = await fetchPokemon()
+    let pokemon = await fetchPokemon()
     if (pokemon) {
       try {
         console.log(pokemon)
@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const pokeAbility = document.getElementById('pokeAbility')
   let abilityToDisplay = ''
   const fetchPokemonAbilitiesA = async () => {
-    const abilities = await fetchPokemonAbilities()
+    let abilities = await fetchPokemonAbilities()
     console.log(abilities)
 
     if (abilities) {
@@ -58,7 +58,7 @@ window.addEventListener('DOMContentLoaded', () => {
     if (pokeAbility.innerText !== '') {
       pokeAbility.innerText = ''
     }
-     pokeAbility.innerText = `It now knows the move ${abilityToDisplay}!`
+    pokeAbility.innerText = `It now knows the move ${abilityToDisplay}!`
   }
 
   const invoquePokemon = () => {
@@ -72,9 +72,8 @@ window.addEventListener('DOMContentLoaded', () => {
     pokeDiv.appendChild(pokeAbility)
   }
 
-  (function startAll () {
+  ;(function startAll() {
     invoquePokemon()
     pokemonAbility()
   })()
-
 })
