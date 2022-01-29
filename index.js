@@ -27,8 +27,11 @@ app.get('/', (req, res) => {
 
 app.post('/comment', (req, res) => {
   const comment = req.body.message
-  // comment.replace('<script>for(let i = 1; i < 20; i++) { alert(`Coucou ${i} fois !`) }</script>').replace(/>/g, '&gt;');
-  res.send(comment)
+  if (comment.includes('<script>')){
+    res.status(404).send('Vous ne pouvez pas enterer une scripte')
+  } else {
+    res.send(comment)
+  }
 })
 
 app.listen(port, host, () => {
