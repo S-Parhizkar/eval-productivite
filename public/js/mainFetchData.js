@@ -72,7 +72,7 @@ window.addEventListener('DOMContentLoaded', () => {
     pokeDiv.appendChild(pokeAbility)
   }
 
-  ;(function startAll() {
+  ;(function startAll () {
     invoquePokemon()
     pokemonAbility()
   })()
