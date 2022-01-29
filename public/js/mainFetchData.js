@@ -1,14 +1,14 @@
-'use strict';
+'use strict'
 
-import {fetchPokemon} from "./fetchPokemon.mjs";
-import {fetchPokemonAbilities} from "./fetchPokemonAbilities.mjs"
+import { fetchPokemon } from './fetchPokemon.mjs'
+import { fetchPokemonAbilities } from './fetchPokemonAbilities.mjs'
 
 window.addEventListener('DOMContentLoaded', () => {
   const pokeP = document.getElementById('pokeInfo')
   const pokeDiv = document.getElementById('pokemon-info')
   const pokeAbilityBtn = document.getElementById('ability')
   const pokeInfo = {}
-  const fetchPokemonA = async()=>{
+  const fetchPokemonA = async () => {
     const pokemon = await fetchPokemon()
     if (pokemon) {
       try {
@@ -31,12 +31,11 @@ window.addEventListener('DOMContentLoaded', () => {
     pokeP.innerText = `Your Pokémon is ${pokeInfo.name}.`
     pokeAbilityBtn.removeAttribute('disabled')
   }
-    
   const pokeAbility = document.getElementById('pokeAbility')
-  let abilityToDisplay= ''
-  const fetchPokemonAbilitiesA = async ()=>{
+  let abilityToDisplay = ''
+  const fetchPokemonAbilitiesA = async () => {
     const abilities = await fetchPokemonAbilities()
-    console.log( abilities)
+    console.log(abilities)
 
     if (abilities) {
       try {
@@ -73,7 +72,7 @@ window.addEventListener('DOMContentLoaded', () => {
     pokeDiv.appendChild(pokeAbility)
   }
 
-  ;(function startAll () {
+  (function startAll () {
     invoquePokemon()
     pokemonAbility()
   })()

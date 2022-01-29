@@ -1,16 +1,15 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    commonjs: true,
+    es2021: true
   },
-  extends: ['standard'],
-  extends: ["prettier"],
-  plugins: ["prettier"],
+  extends: [
+    'standard'
+  ],
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
+    ecmaVersion: 12
   },
   rules: {
-    prettier: 2
-  },
-};
+  }
+}

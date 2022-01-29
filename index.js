@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 import express from 'express'
 import path from 'path'
@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 
 app.post('/comment', (req, res) => {
   const comment = req.body.message
-  if (comment.includes('<script>')){
+  if (comment.includes('<script>')) {
     res.status(404).send('Vous ne pouvez pas enterer une scripte')
   } else {
     res.send(comment)
