@@ -18,8 +18,6 @@ export const returnAnObject = (...args) => {
 }
 
 /**
- *
- *
  * @param {arrayOfNumbers} arrayOfNumbers receive the numbers as array type, if nothings put in here it will enter in ELSE and return the no valid message
  * @return {arrayOfNumbers} [number] that we put as arrayOfNumbers arguments
  */
