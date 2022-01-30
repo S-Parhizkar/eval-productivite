@@ -3,6 +3,7 @@
 /**
    * @description mainFetchData, importe 2 module that we exported  from fetchPokemon & fetchPokemonAbilities Modules
    */
+
 import { fetchPokemon } from './fetchPokemon.mjs'
 import { fetchPokemonAbilities } from './fetchPokemonAbilities.mjs'
 
@@ -14,11 +15,14 @@ window.addEventListener('DOMContentLoaded', () => {
   /** @constant {Button} sibling the button tag  by his ID where the 'on click' event/function will execute */
   const pokeAbilityBtn = document.getElementById('ability')
   const pokeInfo = {}
+
   /**
    * @description fetchPokemonA, imported from fetchPokemon Module / fetching Pokemon name
+   *
    * @param {Array} fetchPokemonA a async function which is waiting for the pokemon name from his module.
    * @return {string} pokemon name found from module and pass to PokeP where is empty and waiting by pokeP.innerText.
    */
+
   const fetchPokemonA = async () => {
     let pokemon = await fetchPokemon()
     if (pokemon) {
@@ -49,6 +53,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   /**
    * @description fetchPokemonAbilitiesA, imported from fetchPokemonAbilities Module / Pokemon's Abilities
+   *
    * @param {Array} fetchPokemonAbilitiesA a async function which is waiting for the Pokemon's Abilities from his module.
    * @return {string} Pokemon's Abilities found from module and it pass to pokeAbility where is empty and waiting by pokeP.innerText.
    */
@@ -84,16 +89,19 @@ window.addEventListener('DOMContentLoaded', () => {
    * @param {Function} invoquePokemon function to execute 'click on' event, once clicked the fetchPokemonA function execute in order to add the chassed Pokémon.
    * @return {string} the chassed pokemon/pokeP will print it out into the dive pokeDiv by appendChild syntax.
    */
+
   const invoquePokemon = () => {
     /** @constant {Button} pokeBtn, by clicking on button, the function invoquePokemon will execute */
     const pokeBtn = document.getElementById('pokemon')
     pokeBtn.addEventListener('click', fetchPokemonA)
     pokeDiv.appendChild(pokeP)
   }
+
   /**
    * @param {Function} pokemonAbility function to execute 'click on' event, once clicked the fetchPokemonAbilitiesA function execute in order to add the Pokemon's abilities.
    * @return {string} the chassed abilities/pokeAbility will print it out into the dive pokeDiv by appendChild syntax.
    */
+
   const pokemonAbility = () => {
     pokeAbilityBtn.addEventListener('click', fetchPokemonAbilitiesA)
     pokeDiv.appendChild(pokeAbility)

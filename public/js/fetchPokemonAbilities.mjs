@@ -1,8 +1,10 @@
 /**
  * @description fetchPokemon's abilities, Exported Module should find a random ability for Pokemon that we fetch in other module and return the abilities and send to mainFetchData
+ *
  * @param {any}
  * @return {Array} abilities from foundAbilities.json() that we fetched from pokeapi url/api.
  */
+
 export const fetchPokemonAbilities = async () => {
   const pokedexNum = Math.floor(Math.random() * 266)
   let foundAbilities = ''
