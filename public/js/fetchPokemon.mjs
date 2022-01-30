@@ -1,5 +1,5 @@
 /**
- * @description fetchPokemon, Exported Module should find a random Pokemon nam and return the name and send to mainFetchData
+ * @description fetchPokemon, Exported Module should find a random Pokemon name and return the name and send to mainFetchData
  * @param {any}
  * @return {Array} pokemon from foundPokemon.json() that we fetched from pokeapi url/api.
  */
